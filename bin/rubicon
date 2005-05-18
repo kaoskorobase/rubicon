@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+unless ENV['RUBICON_LIBDIR']
+  ENV['RUBICON_LIBDIR'] = './lib'
+end
+
+$:.push(ENV['RUBICON_LIBDIR'])
+
+require 'rubicon/rubicon'
+require 'socket'
+
+prog = File.basename($0)
+BasicSocket.do_not_reverse_lookup = true
+
+if prog == 'rubicon-server'
+  Rubicon::Server.main
+elsif prog == 'rubicon-relay'
+  Rubicon::Relay.main
+elsif prog == 'rubicon-test-client'
+  Rubicon::TestClient.main
+end

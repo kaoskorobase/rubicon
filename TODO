@@ -1,0 +1,8 @@
+interesting information
+
+- network connection 'quality'
+- roundtrip delay (avg, peak)
+- bytes sent/recv'd
+- clients online/reachable
+
+-> piggyback status messages on normal traffic
