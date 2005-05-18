@@ -1,5 +1,5 @@
+require 'osc/osc'
 require 'socket'
-require 'osc'
 
 # SERVER
 
